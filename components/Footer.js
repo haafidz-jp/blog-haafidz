@@ -1,10 +1,13 @@
 import Link from './Link'
 import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
+import NowPlaying from '@/components/NowPlaying'
 
 export default function Footer() {
   return (
     <footer>
+      <hr className="w-full border-1 border-gray-200 dark:border-gray-800 mb-8 mt-4" />
+      <NowPlaying />
       <div className="flex flex-col items-center mt-16">
         <div className="flex mb-3 space-x-4">
           <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size="6" />

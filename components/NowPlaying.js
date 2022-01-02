@@ -15,7 +15,7 @@ export default function NowPlaying() {
               ? data.songUrl
               : 'https://open.spotify.com/user/erence21?si=yTsrZT5JSHOp7tn3ist7Ig'
           }
-          className="relative flex items-center p-5 space-x-4 transition-shadow border rounded-md hover:shadow-md w-72"
+          className="relative flex items-center p-5 space-x-4 transition-shadow border rounded-md hover:shadow-md w-72 dark:bg-gray-900"
         >
           <div className="w-16">
             {data?.isPlaying ? (
@@ -26,10 +26,10 @@ export default function NowPlaying() {
           </div>
 
           <div className="flex-1">
-            <p className="font-bold component text-gray-200	">
+            <p className="font-bold component text-black	dark:text-gray-300">
               {data?.isPlaying ? data.title : 'Not Listening'}
             </p>
-            <p className="text-xs font-dark text-gray-200	">
+            <p className="text-xs font-dark text-black dark:text-gray-200	">
               {data?.isPlaying ? data.artist : 'Spotify'}
             </p>
           </div>

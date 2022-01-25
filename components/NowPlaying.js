@@ -13,7 +13,7 @@ export default function NowPlaying() {
           href={
             data?.isPlaying
               ? data.songUrl
-              : 'https://open.spotify.com/user/erence21?si=yTsrZT5JSHOp7tn3ist7Ig'
+              : 'https://open.spotify.com/user/xcsbodt16z8tmlwl7ixa6tydg?si=4b8fb2749e8543c1'
           }
           className="relative flex items-center p-5 space-x-4 transition-shadow border rounded-md hover:shadow-md w-72 dark:bg-gray-900"
         >

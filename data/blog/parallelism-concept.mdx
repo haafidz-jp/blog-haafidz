@@ -1,0 +1,68 @@
+---
+title: Parallelism Concept
+date: '2022-03-22'
+tags: ['gunadarma','komputasi modern']
+draft: false
+summary: Paralelisme (parallelism) lahir dari pendekatan yang biasa dipergunakan oleh para perancang sistem untuk menerapkan konsep pemrosesan konkuren.
+images: []
+layout: PostLayout
+---
+
+## Parallelism Concept
+
+Paralelisme (parallelism) lahir dari pendekatan yang biasa dipergunakan oleh para perancang sistem untuk menerapkan konsep pemrosesan konkuren. Teknik ini meningkatkan kecepatan proses dengan cara memperbanyak jumlah modul perangkat keras yang dapat beroperasi secara simultan disertai dengan membentuk beberapa proses yang bekerja secara simultan pada modul-modul perangkat keras tersebut.
+
+Secara formal, pemrosesan paralel adalah sebuah bentuk efisien pemrosesan informasi yang menekankan pada eksploitasi dari konkurensi kejadian-kejadian dalam proses komputasi.Pemrosesan paralel dapat terjadi pada beberapa tingkatan (level) proses. Tingkatan tertinggi pemrosesan paralel terjadi pada proses di antara banyak job (pekerjaan) atau pada program yang menggunakan multiprogramming, time sharing, dan multiprocessing. Multiprogramming kemampuan eksekusi terhadap beberapa proses perangkat lunak dalam sebuah system secara serentak, jika dibandingkan dengan sebuah proses dalam satu waktu, dan timesharing berarti menyediakan pembagian selang waktu yang tetap atau berubah-ubah untuk banyak program.
+
+Multiprocessing adalah dukungan sebuah sistem untuk mendukung lebih dari satu prosesor dan mengalokasikan tugas kepada prosesor-prosesor tersebut. Multiprocessing sering diimplementasikan dalam perangkat keras (dengan menggunakan beberapa CPU sekaligus), sementara multiprogramming sering digunakan dalam perangkat lunak. Sebuah sistem mungkin dapat memiliki dua kemampuan tersebut, salah satu di antaranya, atau tidak sama sekali.
+
+Pemrosesan paralel dapat juga terjadi pada proses di antara prosedurprosedur atau perintah perintah (segmen program) pada sebuah program.Untuk meningkatkan kecepatan proses komputasi, dapat ditempuh dua cara :
+
+1. Peningkatan kecepatan perangkat keras.
+
+    Komponen utama perangkat keras komputer adalah processor. Meskipun kecepatan processor dapat ditingkatkan terus, namun karena keterbatasan materi pembuatnya, tentu ada suatu batas kecepatan yang tak mungkin lagi dapat dilewati. Karena itu timbul ide pembuatan komputer multiprocessor. Dengan adanya banyak processor dalam satu komputer, pekerjaan bisa dibagi-bagi kepada masing-masing processor.
+
+2. Peningkatan kecepatan perangkat lunak.
+
+    Program komputer untuk komputer sekuensial harus menyediakan sederetan operasi untuk dikerjakan oleh prosesor tunggal. Program komputer untuk komputer paralel harus menyediakan sederetan operasi untuk beberapa prosesor untuk dikerjakan secara paralel, termasuk operasi untuk mengatur dan mengitegrasikan prosesor-prosesor yang terpisah tersebut mengerjakan suatu komputasi yang koheren.
+
+    Kebutuhan akan pembuatan dan pengaturan berbagai aktivitas komputasi paralel menambah dimensi baru proses dari pemrograman komputer. Algoritma untuk problem yang spesifik harus diformulasikan sedemikian rupa, agar menghasilkan aliran operasi paralel yang kemudian akan dieksekusi di prosesor yang berbeda.
+
+    Karena itu, meskipun arsitektur multiprosesor dan multikomputer mempunyai pontensi yang tinggi untuk meningkatkan kemampuan komputasi, potensi ini akan tercapai melalui pengertian yang baik mengenai bahasa pemrograman paralel dan perancangan algoritma paralel.
+
+## Tingkat Paralelisme
+
+Berdasarkan tingkat paralelismenya prosesor paralel dapat dibagi menjadi beberapa tingkat sebagai berikut :
+
+1. Komputer Array :
+
+    - Prosesor array : beberapa prosesor yang bekerja sama untuk mengolah set instruksi yang sama dan data yang berbeda – beda atau biasa disebut SIMD (Single Instruction-stream Multiple Data).
+    - Prosesor vektor : beberapa prosesor yang disusun seperti pipeline.
+2. Multiprosesor, yaitu sebuah sistem yang memiliki 2 prosesor atau lebih yang saling berbagi memori.
+3. Multikomputer, yaitu sebuah sistem yang memiliki 2 prosesor atau lebih yang masing-masing prosesor memiliki memori sendiri.
+
+## Jenis-Jenis Pemrosesan Paralel
+
+Pemrosesan paralel dapat dibagi ke dalam beberapa klasifikasi, sebagai berikut :
+1. Berdasarkan simetri penjadwalannya, pemrosesan parallel dapat dibagi dalam beberapa jenis:
+    - Asymmetric Multiprocessing (ASMP).
+    - Symmetric Multiprocessing (SMP).
+    - ClusteringPoliteknik Telkom Sistem Komputer.
+2. Berdasarkan aliran instruksi dan datanya, pemrosesan parallel dapat dibagi dalam beberapa jenis:
+    - SISD (Single Instruction on Single Data Stream).
+    - SIMD (Single Instruction on Multiple Data Stream).
+    - MISD (Multiple Instruction on Single Data Stream).
+    - MIMD (Multiple Instruction on Multiple Data Stream).
+3. Berdasarkan kedekatan antar prosesor, pemrosesan parallel dapat dibagi dalam beberapa jenis:
+    - Multikomputer (Loosely Coupled/ local memory) dengan memori yang terdistribusi.
+    - Multiprosesor (Tightly Coupled/ global memory) dengan memori yang dapat digunakan bersama (shared memory).
+
+## Distributed Processing
+
+Mengerjakan semua proses pengolahan data secara bersamaantara komputer pusat dengan beberapa komputer yang lebihkecil dan saling dihubungkan melalui jalur komunikasi. Setiapkomputer tersebut memiliki prosesor mandiri sehingga mampumengolah sebagian data secara terpisah, kemudian hasil pengolahan tadi digabungkan menjadi satu penyelesaian total.Jika salah satu prosesor mengalami kegagalan atau masalahyang lain akan mengambil alih tugasnya.
+
+Beberapa keunggulan metode ini adalah waktu idle prosesor pusat lebih sedikit. Lebih responsive terhadap solusi atau masalah yang bisa saja muncul saat pengolahan data. Sedangkan kekurangan metode ini adalah biaya fasilitas yang cukup mahal, terminal output input yang seringkali lambat dan tidak efisien, keamanan kurang terjaga.
+
+## Contoh dari Distributed Data Processing System :
+
+ATM, komputer yang dirancang untuk tugas-tugas melaksanakan proyek, analisis finansial, penjadwalan waktu dan akuntansi. Contoh lainnya, pengolahan data pada server yahoo yang tersebar hampir di seluruh dunia secara distribusi, setiap wilayah mempunyai server masing-masing. Seperti di indonesia mempunyai server tersendiri sehingga pengolahan data tidak di pusat melainkan di wilayah masing-masing, dll.
